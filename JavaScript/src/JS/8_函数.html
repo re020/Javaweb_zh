@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+</head>
+<body>
+
+    <script>
+
+        var num = 123;
+        function foo() {
+            console.log( num );
+        }
+        foo();
+
+        if ( false ) {
+            var num = 123;
+        }
+        console.log( num ); // undefiend
+
+      /*
+        只有函数可以制造作用域结构， 那么只要是代码，就至少有一个作用域, 即全局作用域。
+        凡是代码中有函数，那么这个函数就构成另一个作用域。如果函数中还有函数，那么在这个作用域中就又可以诞生一个作用域。
+        将这样的所有的作用域列出来，可以有一个结构: 函数内指向函数外的链式结构。就称作作用域链。
+
+
+
+       */
+        // 案例1：
+        function f1() {
+            function f2() {
+            }
+        }
+
+        var num = 456;
+        function f3() {
+            function f4() {
+            }
+        }
+
+        // 案例2
+        function f1() {
+            var num = 123;
+            function f2() {
+                console.log( num );
+            }
+            f2();
+        }
+        var num = 456;
+        f1();
+
+
+
+    </script>
+
+</body>
+</html>

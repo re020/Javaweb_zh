@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+        <div id="winfloat_div_w100" style="position: absolute; background: rgba(255, 255, 255, 0); padding: 5px; z-index: 1025; cursor: pointer; left: 22px; top: 32px;">
+                <span class="Article_MicroImage">
+                    <a href="https://dsjy.ecut.edu.cn/" target="blank" title="飘窗">
+                        <img src="../asfa" alt="tupian" width="320">
+                    </a>
+                </span>
+            <div align="right">
+                <div style="font-size: 9pt;width:40px; cursor: pointer" align="right" onclick="$('#winfloat_div_w100').hide()">×关闭</div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#winfloat_div_w100').imgFloat({
+                    speed: 34,
+                    xPos: 356,
+                    yPos: 338
+                });
+            });
+        </script>
+</body>
+</html>

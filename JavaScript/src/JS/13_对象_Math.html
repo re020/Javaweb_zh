@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math对象</title>
+</head>
+<body>
+
+    <script>
+        /*
+            Math:数学
+                1.创建：
+                    *特点：math对象不用创建，直接使用    Math.方法名();
+
+                2.方法：
+                    random();返回0-1之间的随机数（左闭右开）
+                    ceil(x); 对数进行上舍入
+                    floor(x); 对数进行下舍入
+                    round(x); 把数进行四舍五入
+                3.属性：
+                    PI
+
+
+         */
+
+        document.write(Math.PI + "<br>");
+        document.write(Math.random() + "<br>");
+        document.write(Math.PI + "<br>");
+        document.write(Math.random() + "<br>");
+        document.write(Math.round(3.14) + "<br>");
+        document.write(Math.ceil(3.14) + "<br>");
+        document.write(Math.floor(3.14) + "<br>");
+
+        a = Math.random() * 100;
+        b = Math.floor(a);
+
+        document.write(b + "<br>");
+        document.write(Math.floor(Math.random()*100)+"<br>");
+
+
+    </script>
+
+</body>
+</html>

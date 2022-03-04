@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window对象</title>
+</head>
+<body>
+
+        <input id="open" type="button" value="创建新窗口" >
+        <input id="close" type="button" value="关闭新窗口" >
+
+        <script>
+            /*
+                Window 窗口对象
+                    1.创建
+                    2.方法
+                        与弹出框有关的方法
+                            alert();  显示一段消息和一个按钮的警告框
+                            confirm();  显示带有一段消息以及确认和取消按钮的的对话框
+                                * 如果用户点击确定按钮，则返回true；
+                                * 如果用户点击取消按钮，则返回false；
+                            prompt();   显示可提示用户可输入的对话框
+                        与打开关闭有关的方法；
+                            open(); 打开一个新的浏览器窗口
+                            close(); 关闭浏览器窗口
+                        与定时器有关
+                            setTimeout();  在指定毫秒数后调用函数或者计算表达式。
+                                   *参数
+                                        1.JS代码或者方法对象
+                                        2.毫秒值
+                                   *返回值；唯一标识，用于取消定时器
+                            clearTimeout();
+                            setInterval();  周期
+                            clearInterval();
+                    3.属性
+                    4.特点
+                        *window对象不需要创建可以直接使用  window使用。 window.方法名();
+                        *window引用可以省略。  方法名();
+
+             */
+
+           /* alert("hello world");
+            window.alert("hello world");*/
+
+
+
+           /*var flag = confirm("你确定要退出吗？");
+            // alert(flag);
+
+            if (flag){
+                alert("欢迎下次光临");
+            }else{
+                alert("手别抖");
+            }*/
+
+           /*var result = prompt("输入用户名");
+            alert(result);*/
+
+            var openW = document.getElementById("open");
+            var closeW = document.getElementById("close");
+           var newWindows;
+            openW.onclick = function () {
+                newWindows = open();
+            }
+            closeW.onclick = function () {
+                newWindows.close();
+            }
+
+            function fun() {
+                alert("boom---");
+            }
+           /* var id =setTimeout(fun,2000);
+            clearTimeout(id);*/
+
+            var id1 = setInterval(fun,2000);
+            clearInterval(id1);
+
+        </script>
+
+</body>
+</html>

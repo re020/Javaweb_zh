@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array对象</title>
+</head>
+<body>
+
+    <script>
+        /*
+        Array对象
+        1.创建
+            1.var 对象名 = new Array(元素列表);
+            2.var 对象名 = new Array(长度);
+            3.var 对象名 = [元素列表];
+        2.方法
+
+        3.属性
+            length：数组的长度
+        4.特点
+            1.JS中，数组的元素类型是可变的
+            2.JS中，数组的长度是可变的
+
+         */
+
+       /* var arr1 = new Array(1,2,3);
+        var arr2 = new Array(5);
+        var arr3 = [1,2,3,4];
+        var arr4 = new Array();
+
+        document.write(arr1+"<br>");
+        document.write(arr2+"<br>");
+        document.write(arr4+"<br>");
+        document.write(arr3+"<br>");
+*/
+        var arr5 = [1,"zbc",true];
+        document.write(arr5[0]+"<br>");
+        document.write(arr5[1]+"<br>");
+        document.write(arr5[2]+"<br>");
+        //索引可以越界
+        document.write(arr5[3]+"<br>");
+
+        arr5[6]="re";
+        document.write(arr5.join()+"<br>");
+        document.write(arr5.join("--")+"<br>");
+        document.write(arr5[5]+"<br>");
+
+        arr5.push(7);
+        document.write(arr5.join('-')+"<br>");
+        document.write(arr5.join("/")+"<br>");
+
+
+
+
+    </script>
+
+</body>
+</html>

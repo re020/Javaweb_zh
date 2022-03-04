@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建</title>
+</head>
+<body>
+
+    <a>点我一下</a>
+    <input type="button" id="set" value="创建">
+    <input type="button" id="remove" value="删除">
+
+
+    <script>
+
+        var element_0 = document.getElementsByTagName("a")[0];
+
+        var set = document.getElementById("set");
+        set.onclick = function () {
+            element_0.setAttribute("href","https://www.baidu.com");
+        }
+
+        var remove = document.getElementById("remove");
+        remove.onclick = function () {
+            element_0.removeAttribute("href");
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一元运算符</title>
+</head>
+<body>
+
+<script>
+    /**
+     *  * +(-) : 正负号
+     *      在JS中，如果运算数不是运算符所要求的类型,那么JS引擎会自动的将运算数进行类型转换
+     *          *其他类型转number：
+     *              String转number：按照字面值转换，如果字面值不是数字则转化为NaN
+     *              Boolean转number：true转为1，false转为0；
+     *
+     */
+
+    var a = +"123";
+    document.write(typeof a + "<br>");
+    document.write(a + 1 + "<br>");
+
+    var b = +"abc";
+    document.write(typeof b + "<br>");
+    document.write(b + 1 + "<br>");
+
+    var c = +true;
+    var d = +false;
+    document.write(typeof c + "<br>");
+    document.write(c + "<br>");
+    document.write(typeof d + "<br>");
+    document.write(d + "<br>");
+
+
+</script>
+</body>
+</html>

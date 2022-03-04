@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<body>
+
+    <img id="s" src="picture/s.png">
+
+    <script>
+        var flag = 0;
+        function fun() {
+
+            var picture = document.getElementById("s");
+
+            // flag++;
+            /*switch (flag % 3) {
+                case 0:
+                    picture.src = "picture/s.png";
+                    break;
+                case 1:
+                    picture.src = "picture/l.jpg";
+                    break;
+                case 2:
+                    picture.src = "picture/b.jpg";
+
+            }*/
+            if (flag == 0){
+                picture.src = "picture/l.jpg";
+                flag = 1;
+            } else if (flag == 1){
+                picture.src = "picture/b.jpg";
+                flag = 2;
+            } else{
+                picture.src = "picture/s.png";
+                flag = 0;
+            }
+        }
+
+        setInterval(fun,2000);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+</head>
+<body>
+
+    <script>
+        /**
+         * //声明一个带返回值的函数
+         function 函数名(形参1, 形参2, 形参...){
+            //函数体
+            return 返回值;
+        }
+
+         //可以通过变量来接收这个返回值
+         var 变量 = 函数名(实参1, 实参2, 实参3);
+         */
+
+        /*
+        匿名函数不能通过直接调用来执行，因此可以通过匿名函数的自调用的方式来执行
+
+
+        将匿名函数赋值给一个变量，这样就可以通过变量进行调用
+        匿名函数自调用
+
+         */
+
+        (function () {
+            alert(123);
+        })();
+
+
+        function fn() {}
+        console.log(typeof fn);
+
+
+        function fn(b) {
+            var a = 10;
+            return function () {
+                alert(a+b);
+            }
+        }
+        fn(15)();
+
+        /*
+        1.命名规范
+        2.变量规范
+        var name = 'zs';
+        3.注释规范
+        // 这里是注释
+        4.空格规范
+        5.换行规范
+        var arr = [1, 2, 3, 4];
+        if (a > b) {
+
+        }
+        for(var i = 0; i < 10; i++) {
+
+        }
+        function fn() {
+
+        }
+
+         */
+
+    </script>
+
+</body>
+</html>

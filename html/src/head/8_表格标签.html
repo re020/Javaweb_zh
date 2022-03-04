@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+<body>
+
+    <table border="1" width="50%" cellpadding="5" cellspacing="5" bgcolor="red" align="center">
+<!--        <tr>-->
+<!--            <td>编号</td>-->
+<!--            <td>姓名</td>-->
+<!--            <td>成绩</td>-->
+<!--        </tr>-->
+
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>成绩</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>小龙女</td>
+<!--            <a href="./5_列表标签.html" target="_blank"><td>100</td></a>-->
+            <td>100</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>杨过</td>
+            <td>59</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table border="1" width="50%" cellpadding="5" cellspacing="5" bgcolor="red" align="center">
+
+        <caption>学生信息表</caption>
+
+        <!--        <tr>-->
+        <!--            <td>编号</td>-->
+        <!--            <td>姓名</td>-->
+        <!--            <td>成绩</td>-->
+        <!--        </tr>-->
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>成绩</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr bgcolor="aqua" align="center">
+                <td>1</td>
+                <td>小龙女</td>
+                <!--            <a href="./5_列表标签.html" target="_blank"><td>100</td></a>-->
+                <td>100</td>
+            </tr>
+
+            <tr align="center">
+                <td>2</td>
+                <td>杨过</td>
+                <td rowspan="2">59</td>
+            </tr>
+
+            <tr align="center">
+                <td>2</td>
+                <td>杨过</td>
+
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>3</th>
+                <th>尹志平</th>
+                <th>23</th>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <hr>
+
+    <table border="1" width="50%" cellpadding="5" cellspacing="5" bgcolor="red" align="center">
+
+        <caption>学生信息表</caption>
+
+
+        <tr>
+            <th rowspan="2">编号</th>
+            <th>姓名</th>
+            <th>成绩</th>
+        </tr>
+
+
+
+        <tr>
+            <td>小龙女</td>
+            <td>100</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td colspan="2" align="center" bgcolor="red">杨过</td>
+
+        </tr>
+
+        <tfoot>
+        <tr>
+            <th>3</th>
+            <th>尹志平</th>
+            <th>23</th>
+        </tr>
+        </tfoot>
+
+    </table>
+
+</body>
+</html>

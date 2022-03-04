@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+        <img id="on" src="picture/l.jpg" >
+
+        <script>
+            var off = document.getElementById("on");
+            var flag = false;
+            off.onclick = function() {
+                /*switch (flag) {
+                    case 0:
+                        off.src = "picture/b.jpg";
+                        flag = 1;
+                        break;
+                    case 1 :
+                        off.src = "picture/l.jpg";
+                        flag = 0;
+                }*/
+               if (flag){
+                   off.src = "picture/l.jpg";
+                   flag = false;
+               }
+               else{
+                   off.src = "picture/b.jpg";
+                   flag = true;
+               }
+
+
+
+
+
+               //alert("被点了");
+
+            }
+
+
+
+        </script>
+
+
+
+
+</body>
+</html>

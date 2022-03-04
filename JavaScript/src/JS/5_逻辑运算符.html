@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算符</title>
+</head>
+<body>
+
+    <script>
+        /**
+         *  ！：非
+         *      其他类型转Boolean：
+         *          1，number：0 或 NaN 为false，其他都是true
+         *          2.string：除了空字符（""），其他的都是true
+         *          3.null  undefined ：都是false
+         *          4.对象 ：所有对象都是true
+         */
+
+        var a = 0;
+        var b = NaN;
+        var c = 1;
+        var d = "";
+        var e = 'adf';
+        var f = null;
+        var g ;
+        var h = new Date();
+
+        document.write(!!a+"<br>");
+        document.write(!!b+"<br>");
+        document.write(!!c+"<br>");
+        document.write(!!d+"<br>");
+        document.write(!!e+"<br>");
+        document.write(!!f+"<br>");
+        document.write(!!g+"<br>");
+        document.write(!!h+"<br>");
+
+        var obj = new Object();
+        //obj=123;
+        if(obj != null & obj.length > 0){//防止空指针异常
+            alert(123);
+        }
+        if(obj){
+            alert(345);
+        }
+
+
+    </script>
+
+</body>
+</html>

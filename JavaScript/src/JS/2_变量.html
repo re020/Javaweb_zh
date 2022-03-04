@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量</title>
+</head>
+<body>
+
+<script>
+    var num = 1;
+    var num1 = 1.2;
+    var num2 = NaN;
+    document.write(num + "-----"+ typeof num +"<br>");
+    document.write(num1 + "-----"+ typeof num1 + "<br>");
+    document.write(num2 +"-----"+ typeof num + "<br>");
+
+    var str1 = "abc";
+    var str2 = 'efg';
+    document.write(str1 + "-----"+ typeof str1 +"<br>");
+    document.write(str2 +  "-----"+ typeof str2 +"<br>");
+
+    var flag = true;
+    var flag1 = undefined;
+    var flag2;
+    var flag3 = null;
+    document.write(flag +  "-----"+ typeof flag +"<br>");
+    document.write(flag1 +  "-----"+ typeof flag1 +"<br>");
+    document.write(flag2 +  "-----"+ typeof flag2 +"<br>");
+    document.write(flag3+ "-----"+ typeof flag3 +"<br>");
+
+
+    var str = '程序猿 Hello World';
+    console.log(str.length);
+
+    /*
+    1.两边只要有一个是字符串，那么+就是字符串拼接功能
+    2.两边如果都是数字，那么就是算术功能。
+*/
+    console.log(11 + 11);
+    console.log('hello' + ' world');
+    console.log('100' + '100');
+    console.log('11' + 11);
+    console.log('male:' + true);
+
+
+
+</script>
+
+
+</body>
+</html>

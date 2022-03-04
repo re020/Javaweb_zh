@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格</title>
+
+    <style>
+        div{
+            text-align: center;
+            margin: 50px;
+        }
+
+        table{
+            margin: auto;
+            border: 1px solid;
+            width: 600px;
+        }
+        td,th{
+            border: 1px solid;
+            text-align: center;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+        <div>
+            <input type="text" placeholder="序号" id="num" name="num">
+            <input type="text" placeholder="姓名" id="name"  name="name">
+            <input type="text" placeholder="性别" id="sex"  name="sex">
+            <input type="submit" id="add" value="添加">
+        </div>
+
+        <table id="table" align="center" name="Table">
+            <tr>
+                <th>序号</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>操作</th>
+            </tr>
+
+        </table>
+
+        <script>
+            var element_add = document.getElementById("add");
+            var table = document.getElementById("table");
+            var num = document.getElementById("num").value;
+            var name = document.getElementById("name").value;
+            var sex = document.getElementById("sex").value;
+
+
+
+            /*var flag = 1;*/
+
+            element_add.onclick = function () {
+
+
+                var tr = document.createElement("tr"/*+(flag+"")*/);
+                var td1 = document.createElement("td");
+                var td2 = document.createElement("td");
+                var td3 = document.createElement("td");
+                var Td4 = document.createElement("td");
+                var td4 = document.createElement("a");
+
+                Td4.appendChild(td4);
+
+               /* document.write(num);
+                document.write(name);
+                document.write(sex);*/
+                /*flag++;*/
+
+                /* tr.setAttribute("id","tr"/!*+(flag+"")*!/);
+                td1.setAttribute("id","td1");
+                td2.setAttribute("id","td2");
+                td3.setAttribute("id","td3");
+                td4.setAttribute("id","td4");
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);*/
+
+                /* td1.innerHTML = td_1;
+                td2.innerHTML = td_2;
+                td3.innerHTML = td_3;
+                td4.innerHTML = td_4;*/
+
+
+                var td_1 = document.createTextNode(num);
+                var td_2 = document.createTextNode(name);
+                var td_3 = document.createTextNode(sex);
+                var td_4 = document.createTextNode("删除");
+
+                // var a = document.getElementsByTagName("a")[0];
+
+                td4.setAttribute("href","javascript:void(0);");
+                td4.setAttribute("onclick","delTr(this)");
+                // a.innerHTML="删除";
+
+
+                /* var td_4 = document.createTextNode = function () {
+                    document.write("<a id='remove'>");
+                    document.write("删除");
+                    document.write("</a>")
+                };*/
+
+                td1.appendChild(td_1);
+                td2.appendChild(td_2);
+                td3.appendChild(td_3);
+                td4.appendChild(td_4);
+
+               /* td1.innerHTML = td_1;
+                td2.innerHTML = td_2;
+                td3.innerHTML = td_3;
+                td4.innerHTML = td_4;*/
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(Td4);
+
+                table.appendChild(tr);
+
+
+
+                /* var td_4 = document.createTextNode = function () {
+                 document.write("<a id='remove'>");
+                 document.write("删除");
+                 document.write("</a>")
+             };
+
+             tr.appendChild(td_4());
+             td4.appendChild(td_4());*/
+            }
+
+            function delTr(obj) {
+                var table = obj.parentNode.parentNode.parentNode;
+                var tr = obj.parentNode.parentNode;
+
+                table.removeChild(tr);
+            }
+
+        </script>
+
+</body>
+</html>

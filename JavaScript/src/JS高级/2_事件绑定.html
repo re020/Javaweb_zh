@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+        <img id="on" src="picture/l.jpg">
+
+        <script>
+
+            /*function fun1() {
+                var flag = false;
+                var off = document.getElementById("on");
+                /!*switch (flag) {
+                    case 0:
+                        off.src = "picture/b.jpg";
+                        flag = 1;
+                        break;
+                    case 1 :
+                        off.src = "picture/l.jpg";
+                        flag = 0;
+                }*!/
+               if (flag){
+                   off.src = "picture/l.jpg";
+                   flag = false;
+               }
+               else{
+                   off.src = "picture/b.jpg";
+                   flag = true;
+               }*/
+
+            var light = document.getElementById("on");
+
+            var flag = false;
+
+            light.onclick = function () {
+                if (flag) {
+                    light.src = "picture/b.jpg";
+                    flag = false;
+                } else {
+                    light.src = "picture/l.jpg";
+                    flag = true;
+                }
+
+
+
+
+
+               //alert("被点了");
+
+            }
+
+           /* function fun2() {
+                var on = document.getElementById("off");
+                on.src = "picture/l.jpg"
+            }*/
+
+        </script>
+
+
+
+<!--        <img src="picture/b.jpg" id="off" onclick="fun2">-->
+
+</body>
+</html>
